@@ -20,8 +20,13 @@ const app = createApp({
             } else {
                 this.currentIndex--
             }
-        },
+        }      
     },
+    mounted() {
+        setInterval(() => {
+            this.goToNext()
+        },3000)
+    }
 });
 app.mount('#root');
 
