@@ -11,10 +11,9 @@
 
   <!-- Bootstrap Icon -->
   <link rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css'
-    integrity='sha512-D1liES3uvDpPrgk7vXR/hR/sukGn7EtDWEyvpdLsyalQYq6v6YUsTUJmku7B4rcuQ21rf0UTksw2i/2Pdjbd3g=='
-    crossorigin='anonymous' />
-
+  href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css'
+  integrity='sha512-D1liES3uvDpPrgk7vXR/hR/sukGn7EtDWEyvpdLsyalQYq6v6YUsTUJmku7B4rcuQ21rf0UTksw2i/2Pdjbd3g=='
+  crossorigin='anonymous' />
 
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css" />
@@ -33,11 +32,11 @@
     <div class="container">
       <div id="carousel">
         <!-- Prev button -->
-        <i @click="currentIndex--" id="prev-button" class="bi bi-arrow-left-circle-fill" role="button"></i>
+        <i @click="goToPrev" id="prev-button" class="bi bi-arrow-left-circle-fill" role="button"></i>
   
         <!-- Gallery -->
-        <div v-for="(pic, i) in pictures" v-show=" i === currentIndex" class="gallery">
-          <figure class="">
+        <div class="gallery">
+          <figure v-for="(pic, i) in pictures" v-show=" i === currentIndex" >
             <figcaption>
               <h2>{{pic.name}}</h2>
               <h3>{{pic.description}}</h3>
@@ -47,7 +46,7 @@
         </div>
   
         <!-- next button -->
-        <i @click="currentIndex++"  id="next-button" class="bi bi-arrow-right-circle-fill" role="button"></i>
+        <i @click="goToNext" id="next-button" class="bi bi-arrow-right-circle-fill" role="button"></i>
       </div>
   
       <!-- Thumbnails -->
