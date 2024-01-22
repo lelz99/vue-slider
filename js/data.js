@@ -26,3 +26,4 @@ const pictures = [
     description: 'Epic Nordic fantasy with dragons and ancient magic.',
   }
 ];
+
