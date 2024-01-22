@@ -3,6 +3,7 @@ const app = createApp({
     data() {
         return{
             pictures,
+            currentIndex: 0,
         }
     }
 });
